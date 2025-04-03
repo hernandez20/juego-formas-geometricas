@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Dibujo y Reconocimiento de Formas</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="background">
+
+
+        <div class="character">
+            <img src="./public/gato.svg" alt="" srcset="" width="100%">
+
+
+            <div class="validArea">
+                <div class="hand">
+                    <img src="./public/brazo.svg" alt="" width="120%">
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script src="./dist/main.bundle.js"></script>
+    <script src="./dist/character.bundle.js"></script>
+
+</body>
+
+<style>
+    body {
+        margin: 0px;
+    background-image: url('/public/hallway-of-an-old-magic-castle.png');
+    background-position: bottom; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    min-height: 100vh; 
+    }
+
+
+    .background {
+        position: fixed;
+        z-index: -1;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .character {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    .validArea {
+        width: 10px;
+        height: 40px;
+        position: absolute;
+        top: 60%;
+        right: 10px;
+        z-index: -2;
+    }
+
+    .hand {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        right: 50px;
+    }
+</style>
+
+</html>
